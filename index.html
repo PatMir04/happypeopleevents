@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy People Events — Event Planner in Winnipeg</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { background: #F8FAFC; font-family: 'Segoe UI', sans-serif; }
+    .hero { background: #5146e0; color: #fff; padding: 60px 0; text-align: center; }
+    .navbar { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.03);}
+    .brand-logo { height: 48px; margin-right: 20px; }
+    .section-title { font-weight: 700; margin-bottom: 24px; }
+    .service-card { border: 1px solid #eee; border-radius: 8px; padding: 24px; margin-bottom: 16px; background: #fff; }
+    .book-event { background: #eef2fb; border-radius: 8px; padding: 32px 24px;}
+    .footer { background: #eee; color: #444; font-size: 0.95rem; padding: 20px 0; }
+    .lang-toggle { cursor: pointer; margin-left: 10px; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Happy People Events" class="brand-logo">
+      <span>Happy People Events</span>
+    </a>
+    <div class="ml-auto">
+      <span id="enBtn" class="lang-toggle font-weight-bold">English</span> | 
+      <span id="frBtn" class="lang-toggle">Français</span>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1 id="hero-title">Celebrate Life's Moments With Us</h1>
+    <p id="hero-text" class="lead">Personalized, bilingual event planning for Winnipeg’s community — birthdays, showers, corporate, community, and surprise events. Experience, trust, and local spirit!</p>
+    <a href="#book-section" class="btn btn-light btn-lg mt-3" id="hero-btn">Start Planning</a>
+  </section>
+
+  <section class="container mt-5">
+    <h2 class="section-title text-center" id="about-title">About Happy People Events</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-10 text-center">
+        <p id="about-text">
+          We’re a passionate Winnipeg event planning team, helping you create happy memories — in English and French. Our mission: to make professional event planning seamless, fun, and affordable for the community. Be part of our story; your event could be the first in a new tradition!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-5">
+    <h2 class="section-title text-center" id="services-title">Our Event Services</h2>
+    <div class="row">
+      <div class="col-md-4 service-card">
+        <h5 id="service-birthday">Birthday Parties & Milestones</h5>
+        <p id="service-birthday-desc">Make every birthday unforgettable — from planning, decoration to music and cake!</p>
+      </div>
+      <div class="col-md-4 service-card">
+        <h5 id="service-baby">Baby Showers & Anniversaries</h5>
+        <p id="service-baby-desc">Welcoming a new life or celebrating love? We customize every detail for you.</p>
+      </div>
+      <div class="col-md-4 service-card">
+        <h5 id="service-corporate">Corporate & Community Events</h5>
+        <p id="service-corporate-desc">From team mixers to community festivals, we build connections and memories.</p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-4 service-card">
+        <h5 id="service-surprise">Surprise Parties</h5>
+        <p id="service-surprise-desc">Shhh! We handle all logistics for secret, joyful events — you take the spotlight.</p>
+      </div>
+      <div class="col-md-4 service-card">
+        <h5 id="service-addons">Add-On Services</h5>
+        <p id="service-addons-desc">Decoration, catering, photographers, virtual events, entertainment — our network is your resource.</p>
+      </div>
+      <div class="col-md-4 service-card">
+        <h5 id="service-bilingual">Bilingual Planning</h5>
+        <p id="service-bilingual-desc">Service in English and French to unite our community and welcome everyone!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-5" id="book-section">
+    <h2 class="section-title text-center" id="booking-title">Book a Free Event Consultation</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 book-event">
+        <form id="bookingForm">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label id="name-label">Name</label>
+              <input type="text" class="form-control" id="nameInput" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label id="email-label">Email</label>
+              <input type="email" class="form-control" id="emailInput" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label id="phone-label">Phone</label>
+              <input type="tel" class="form-control" id="phoneInput">
+            </div>
+            <div class="form-group col-md-6">
+              <label id="event-label">Type of Event</label>
+              <select class="form-control" id="eventTypeInput" required>
+                <option>Birthday Party</option>
+                <option>Baby Shower</option>
+                <option>Anniversary</option>
+                <option>Corporate Event</option>
+                <option>Community Event</option>
+                <option>Surprise Event</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label id="date-label">Date</label>
+              <input type="date" class="form-control" id="dateInput" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label id="addons-label">Select Add-Ons</label>
+              <select multiple class="form-control" id="addonsInput">
+                <option>Decoration</option>
+                <option>Catering</option>
+                <option>Photography/Videography</option>
+                <option>Entertainment</option>
+                <option>Virtual Meeting</option>
+                <option>Transportation</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label id="msg-label">Describe your ideas or requests</label>
+            <textarea class="form-control" rows="3" id="descInput"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Submit Booking Request</button>
+        </form>
+        <div class="alert alert-success mt-3 d-none" id="successMessage">Thank you! Your request was received. We’ll contact you soon.</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="container mt-5">
+    <h2 class="section-title text-center" id="contact-title">Contact & Connect</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <p id="contact-info">
+          Have a question or want a custom quote?  
+          <br>Email: <a href="mailto:hello@happypeopleevents.ca">hello@happypeopleevents.ca</a>
+          <br>Phone: <a href="tel:+12045555555">+1 (204) 555-5555</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-5 text-center">
+    © 2025 Happy People Events | Winnipeg | English & Français
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
